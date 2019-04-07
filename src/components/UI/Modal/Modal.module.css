@@ -10,7 +10,9 @@
     /* left: 10%; */
 /*    top: 10%;*/
     top: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 
     /* width: 1170px; */
@@ -24,7 +26,8 @@
 .Center {
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     border-radius: 8px;
 }
 
@@ -42,15 +45,65 @@
 
 .SearchContacts{
     background-color: #f9f9f9;
-    width: 410px;
     border: none;
-    height: 79%;
-    box-shadow: none;
-    top: 21%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80%;
     margin-left: -5px;
+    margin-top: 124px;
+    width: 406px;
 }
 
+.Profile{
+    background-color: #f9f9f9;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80%;
+    margin-left: -5px;
+    margin-top: 124px;
+    width: 406px;
+    /* height: 100%; */
+}
+.ProfileFromMenu{
+    margin-left: -419px;
+}
 
+   
+    
+.MainMenu{
+    background-color: #fff;
+    height: 269px;
+    margin-left: -5px;
+    width: 410px;
+    z-index: 500;
+}
+
+.ChatMenu{
+    background-color: #fff;
+    height: 320px;
+    width: 410px;
+    margin-left: -380px;
+}
+
+.UsersList{
+    left: 45%;
+    top: 10%;
+}
 /* @media (max-width: 600px) {
     .Modal {
         width: 500px;

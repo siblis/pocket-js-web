@@ -71,7 +71,7 @@ class Form extends Component {
                         <div className={classes.ellipse_small}></div>
                         <form action="">
                                 <input className={classes.mail} type="email" required name="email"
-                                       placeholder="Логин"
+                                       placeholder="E-mail"
                                        value={this.state.email}
                                        onChange={this.handleUserInput} />
                             <input className={classes.pass} type="password" name="password"
@@ -82,7 +82,7 @@ class Form extends Component {
                             {/*<div className={classes.forgot_pass}><a href="#">Забыли пароль?</a></div>*/}
                         </form>
                         <div className={classes.registration}>Нет аккаунта?
-                            <Link to='/register'> Зарегистрироваться</Link>
+                            <Link to='/registration'> Зарегистрироваться</Link>
                         </div>
                     </div>
                 {/* </div> */}

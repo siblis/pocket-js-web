@@ -1,13 +1,30 @@
-import React, { Component } from "react";
-import styles from "./ProfileUser.module.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default class ProfileClose extends Component {
-    render() {
-        return (
-            <div className={styles["close-profile"]}>
-        <button className={styles["close-btn"]}>
-            <img src={require("../../../images/personal_profile/cancel.svg")} alt="#" className={styles["close-btn__icon"]}/>
-        </button>
-            </div>)
-    }
-}
+import styles from './ProfileUser.module.css';
+
+const ProfileClose = (props) => {
+  const closeBtn = (props.profileToggle === undefined)
+    ? (
+      <Link to="/chats" className={styles.Button}>
+        <i className={`${styles.ButtonIcon} fas fa-times`} />
+        <p className={styles.ButtonText}>Закрыть</p>
+      </Link>
+    )
+    : (
+      <button
+        className={styles.Button}
+        onClick={() => { props.profileToggle(); }}
+      >
+        <i className={`${styles.ButtonIcon} fas fa-times`} />
+        <p className={styles.ButtonText}>Закрыть</p>
+      </button>
+    );
+  return (
+    <div className={styles['close-profile']}>
+      { closeBtn }
+    </div>
+  );
+};
+
+export default ProfileClose;

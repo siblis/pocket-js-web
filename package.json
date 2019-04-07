@@ -7,22 +7,27 @@
     "classnames": "^2.2.6",
     "emoji-mart": "^2.9.2",
     "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
     "react": "^16.6.3",
+    "react-autosize-textarea": "^6.0.0",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
+    "react-test-renderer": "^16.8.5",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^5.1.1",
     "redux-thunk": "^2.3.0",
-    "socket.io-client": "^2.2.0"
+    "socket.io-client": "^2.2.0",
+    "validator": "^10.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fix": "eslint -c .eslintrc.js --fix  --ext .js src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +37,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-react": "^7.12.4",
+    "react-test-renderer": "^16.8.6"
+  }
 }

@@ -1,9 +1,16 @@
-import {GET_USERS} from "../constants";
+import { GET_USERS } from '../constants';
 import instance from '../axios-docs';
 
-export function getUsers() {
-    return {
-        type: GET_USERS,
-        payload: instance.get('/v1/users/')
-    };
+// import ContactsAPI from '../reducers/contactsStub'
+
+export function getUsers(email) {
+  return {
+    type: GET_USERS,
+    // findUsers: ContactsAPI.findUsers(name), //for testing
+    payload: instance.get('/users/', {
+      params: {
+			    email,
+      },
+    }),
+  };
 }
